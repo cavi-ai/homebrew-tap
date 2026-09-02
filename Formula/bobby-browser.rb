@@ -20,28 +20,28 @@
 class BobbyBrowser < Formula
   desc "Bobby Browser automation runtime (bobby + MCP/ACP gateways)"
   homepage "https://github.com/cavi-ai/bobby-browser"
-  version "0.7.0"
+  version "0.12.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/cavi-ai/bobby-browser/releases/download/v#{version}/bobby-browser-#{version}-macos-arm64.tar.gz"
-      sha256 "68ffce07c395303316efeadd67e9cd4d2c9a19574798e290350d2f407aa2b814"
+      sha256 "98d363a6ee4ba99a10cbf03689c5aabcf8fb8647d11ea4f7f22dc440027416dd"
     end
     on_intel do
       url "https://github.com/cavi-ai/bobby-browser/releases/download/v#{version}/bobby-browser-#{version}-macos-x64.tar.gz"
-      sha256 "0a9e4321ea3cc66743b4559ec59910768312137ffeaa89b27a5ac783e8f2624d"
+      sha256 "499d188a5095c94f1c326310fb74d0c3d7a3af81d2ef5d89867f50d0caab5561"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/cavi-ai/bobby-browser/releases/download/v#{version}/bobby-browser-#{version}-linux-arm64.tar.gz"
-      sha256 "30f21384594efebfdeab44b3039eafc671c88ac177128220ff2774a127ccf69a"
+      sha256 "8320bf4cd9dd171bf7049b02c3a7848be5d94edbbc9864a2b13674fdac11ccd1"
     end
     on_intel do
       url "https://github.com/cavi-ai/bobby-browser/releases/download/v#{version}/bobby-browser-#{version}-linux-x64.tar.gz"
-      sha256 "6ea22617d5cc2d5473582dae1cbaf939970493572dcc559677c764dd1f95d5f8"
+      sha256 "2d54386bfe8d20ad8637c5ec24da39e09ca1c6a7cd069c64358160c673a5eefa"
     end
   end
 
@@ -49,6 +49,8 @@ class BobbyBrowser < Formula
     bin.install "bobby"
     bin.install "mcp-gateway" if File.exist?("mcp-gateway")
     bin.install "acp-gateway" if File.exist?("acp-gateway")
+    (share/"bobby-browser/scripts").install "scripts/vision-mlx"
+    (share/"bobby-browser").install "firefox-companion" if File.exist?("firefox-companion")
   end
 
   test do
