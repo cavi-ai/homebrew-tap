@@ -13,6 +13,7 @@ brew install cavi-ai/tap/bobby-browser
 | Formula | Installs | Upstream |
 |---|---|---|
 | `bobby-browser` | `bobby`, `mcp-gateway`, `acp-gateway` | [cavi-ai/bobby-browser](https://github.com/cavi-ai/bobby-browser) |
+| `mcpeval` | `mcpeval`, `mcpeval-demo` | [cavi-ai/mcp-eval](https://github.com/cavi-ai/mcp-eval) |
 
 Formulae here pull prebuilt binaries from the upstream GitHub Release and carry
 the sha256 of each platform tarball, so brew verifies every download.
