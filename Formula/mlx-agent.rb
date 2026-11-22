@@ -6,8 +6,8 @@ class MlxAgent < Formula
 
   desc "Discover and serve local MLX models on Apple Silicon"
   homepage "https://github.com/cavi-ai/mlx-agent"
-  url "https://files.pythonhosted.org/packages/6a/38/1018a2a4e8eead678a8296acb2aa65bcbeb6b8e064163fbc51d0a4759f87/mlx_agent-0.14.0.tar.gz"
-  sha256 "2aa9da619f3a7815d639645f8ec0c700d40475c906a9c103e38d71bd241a571c"
+  url "https://files.pythonhosted.org/packages/2c/61/6effb857aab09212d9437d8c888b9065e5679c114084e2135b30a3817223/mlx_agent-0.15.0.tar.gz"
+  sha256 "95308dcad2b836f4f6fda160a6c890b97dcbb265c4377fb78f10438feff2aa97"
   license "MIT"
 
   depends_on "python@3.15"
